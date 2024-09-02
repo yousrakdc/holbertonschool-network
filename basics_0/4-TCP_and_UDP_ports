@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# bash scipt that shows listening ports
+ss -tunlp
