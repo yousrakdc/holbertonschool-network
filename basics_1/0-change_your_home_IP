@@ -1,22 +1,8 @@
 #!/usr/bin/env bash
 
-
-HOSTS_FILE="/etc/hosts"
-BACKUP_FILE="/etc/hosts.bak"
-
-# Backup the existing /etc/hosts file
-echo "Backing up the existing /etc/hosts file to $BACKUP_FILE..."
-sudo cp $HOSTS_FILE $BACKUP_FILE
-
 # Update the /etc/hosts file
 echo "Updating the /etc/hosts file..."
 sudo bash -c "cat <<EOF > $HOSTS_FILE
 127.0.0.2   localhost
 8.8.8.8     facebook.com
 EOF"
-
-# Confirm the changes
-echo "Current /etc/hosts file content:"
-cat $HOSTS_FILE
-
-echo "Script executed. To revert changes, use: sudo cp $BACKUP_FILE $HOSTS_FILE"
