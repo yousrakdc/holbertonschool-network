@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-# Displays all active IPv4 IPs
-ifconfig | grep 'inet ' | cut -d "t" -f2 | cut -d ' ' -f2
+# Bash script that changes IP
+echo '127.0.0.2       localhost/' /etc/hosts
+echo "8.8.8.8        facebook.com" >> /etc/hosts
